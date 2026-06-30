@@ -1,0 +1,38 @@
+Edge TPU Compiler version 16.0.384591198
+Input: yolo26n_saved_model/yolo26n_full_integer_quant.tflite
+Output: yolo26n_saved_model/yolo26n_full_integer_quant_edgetpu.tflite
+
+Operator                       Count      Status
+
+STRIDED_SLICE                  10         Mapped to Edge TPU
+STRIDED_SLICE                  16         More than one subgraph is not supported
+DEPTHWISE_CONV_2D              6          More than one subgraph is not supported
+LOGISTIC                       1          Operation is otherwise supported, but not mapped due to some unspecified limitation
+LOGISTIC                       54         More than one subgraph is not supported
+LOGISTIC                       33         Mapped to Edge TPU
+SUB                            2          More than one subgraph is not supported
+PAD                            2          More than one subgraph is not supported
+PAD                            5          Mapped to Edge TPU
+RESHAPE                        11         More than one subgraph is not supported
+RESHAPE                        1          Operation is otherwise supported, but not mapped due to some unspecified limitation
+ADD                            7          Mapped to Edge TPU
+ADD                            17         More than one subgraph is not supported
+SPLIT                          2          More than one subgraph is not supported
+BATCH_MATMUL                   2          Tensor has unsupported rank (up to 3 innermost dimensions mapped)
+BATCH_MATMUL                   2          More than one subgraph is not supported
+SOFTMAX                        2          More than one subgraph is not supported
+MUL                            56         More than one subgraph is not supported
+MUL                            2          Tensor has unsupported rank (up to 3 innermost dimensions mapped)
+MUL                            33         Mapped to Edge TPU
+CONV_2D                        315        More than one subgraph is not supported
+CONV_2D                        35         Mapped to Edge TPU
+RESIZE_NEAREST_NEIGHBOR        2          More than one subgraph is not supported
+CONCATENATION                  15         More than one subgraph is not supported
+CONCATENATION                  7          Mapped to Edge TPU
+CONCATENATION                  2          Operation is otherwise supported, but not mapped due to some unspecified limitation
+TRANSPOSE                      4          Operation is otherwise supported, but not mapped due to some unspecified limitation
+TRANSPOSE                      8          More than one subgraph is not supported
+TRANSPOSE                      4          Tensor has unsupported rank (up to 3 innermost dimensions mapped)
+MAX_POOL_2D                    3          Mapped to Edge TPU
+QUANTIZE                       1          More than one subgraph is not supported
+QUANTIZE                       1          Operation is otherwise supported, but not mapped due to some unspecified limitation
